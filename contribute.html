@@ -37,6 +37,10 @@ th, td {
     color: white;
 }
 
+@media screen and (min-width: 0px) and (max-width: 720px) {
+  .mobile-hide{ display: none; }
+}
+
 </style>
 </head>
 <body>
@@ -49,41 +53,41 @@ th, td {
   <tr>
     <th style="width:40px;"></th>
     <th style="width:60px;"></th>
-    <th style="width:140px;"></th> 
-    <th style="width:140px;"></th>
-    <th style="width:140px;"></th>
+    <th style="width:140px;" class="mobile-hide"></th> 
+    <th style="width:140px;" class="mobile-hide"></th>
+    <th style="width:140px;" class="mobile-hide"></th>
     <th style="width:140px;"></th>
   </tr>
   <tr>
     <td>#1</td> 
     <td><img src="https://onchainfx.com/images/asset_logos/bitcoin.png"></td></td>
-    <td>2 contributions</td> 
-    <td>3.5 BTC</td>
-    <td>$20,800</td>
+    <td class="mobile-hide">2 contributions</td> 
+    <td class="mobile-hide">3.5 BTC</td>
+    <td class="mobile-hide">$20,800</td>
     <td><a class="button" href="btc.html">Contribute BTC</a></td>
   </tr>
   <tr>
   	<td>#2</td> 
     <td><img src="https://onchainfx.com/images/asset_logos/ethereum.png"></td>
-    <td>3 contributions</td> 
-    <td>8.8 ETH</td>
-    <td>$3,956.4</td>
+    <td class="mobile-hide">3 contributions</td> 
+    <td class="mobile-hide">8.8 ETH</td>
+    <td class="mobile-hide">$3,956.4</td>
     <td><a class="button" href="eth.html">Contribute ETH</a></td>
   </tr>
 <tr>
   	<td>#2</td> 
     <td><img src="https://onchainfx.com/images/asset_logos/monero.png"></td>
-    <td>4 contributions</td> 
-    <td>7 XMR</td>
-    <td>$932.96</td>
+    <td class="mobile-hide">4 contributions</td> 
+    <td class="mobile-hide">7 XMR</td>
+    <td class="mobile-hide">$932.96</td>
     <td><a class="button" href="xmr.html">Contribute XMR</a></td>
   </tr>
 <tr>
   	<td></td> 
     <td></td>
-    <td></td> 
-    <td><b>3.89 BTC</b></td>
-    <td><b>$25,708.98</b></td>
+    <td class="mobile-hide"></td> 
+    <td class="mobile-hide"><b>3.89 BTC</b></td>
+    <td class="mobile-hide"><b>$25,708.98</b></td>
     <td></td>
   </tr>
 </table>
