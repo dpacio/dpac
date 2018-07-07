@@ -1,4 +1,4 @@
-# dpac<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8" />
@@ -14,18 +14,72 @@ h1 {
     color: white;
     text-align: : center;
 } 
+
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 24px 48px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 24px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+
+.button:hover {
+    background-color: #2d6930; /* Green */
+    color: white;
+}
+
+
 </style>
+
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("Nov 3, 2020 00:00:00").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+    // Get todays date and time
+    var now = new Date().getTime();
+    
+    // Find the distance between now an the count down date
+    var distance = countDownDate - now;
+    
+    // Time calculations for days, hours, minutes and seconds
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+    // Output the result in an element with id="demo"
+    document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+    + minutes + "m " + seconds + "s ";
+    
+    // If the count down is over, write some text 
+    if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("demo").innerHTML = "EXPIRED";
+    }
+}, 1000);
+</script>
 </head>
 <body>
 <div>
+<a href="index.html"><p style="text-align:center; color:white; margin-top:2vh">#dpac</p></a>
 <p style="text-align:center; color:white; font-size: 2.75em; margin-top:20vh"> Decentralized Political Action Committee</p>
 <p style="text-align:center; color:white; font-size: 1.25em;"> 1. All funds will go towards disseminating ads critical of the re-election of the 45th POTUS.</p>
 <p style="text-align:center; color:white; font-size: 1.25em;"> 2. No funds will be spent before August 5th 2020, 90 days before the US presidential election.</p>
 <p style="text-align:center; color:white; font-size: 1.25em;"> 3. All funds will be spent before November 4th 2020, 1 day after the US presidential election.</p>
 
 <div>
-<p style="text-align:center; color:white; font-size: 1.65em; margin-top:6vh">27</span> contributions - 851 days until end of contribution period. <a href="contribute.html">Contribute</a></p>	
+<p style="text-align:center; color:white; font-size: 1.50em; margin-top:6vh"><span id="demo">Calculating date</span> until next US presidential election / 5 contributors / 21 BTC</p>	
+<p style="text-align:center; margin-top:80px"><a class="button" href="contribute.html">Contribute Now</a></p>
 </div>
+
 <!-- <p style="text-align:center; color:white;"> BTC: 35ErFjXhEpmmYBFqNiuxXxtQ7U2VCN3iRf</p>
 <p style="text-align:center; color:white;"> ETH: 0x5cA179C1044CeDE518Fa31AC0FE1BE7ee3633A3A</p>
 <p style="text-align:center; color:white;"> PART: PjzjjXuAV72SBsBHJTdwfpmmKryt1BEQeP</p>
